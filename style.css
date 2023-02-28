@@ -111,3 +111,30 @@ th,td {
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 600px){
+    table{
+        border: 3px solid #333;
+    }
+    table thead tr{
+        display: none;
+    }
+    table tr{
+        display: block;
+    }
+    table th, table td{
+        padding: .5em;
+    }
+    table td{
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+    table td::before{
+        content: attr(data-title) ": ";
+        float: left;
+    }
+    tbody tr:nth-child(odd){
+    background-color: #333;
+    color: #ccc;
+    }
+  }
